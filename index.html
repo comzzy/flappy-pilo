@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#060a1f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzkiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAzOSA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wLjAxMDA1ODEgMTcuMTAyOEwwLjAxMTIyMzcgMTcuMDk0NEMxLjE5NzUgOC4yNDc3OCA4Ljc3NTE3IDEuNDI1MTcgMTcuOTQ3IDEuNDI1MTdIMjkuNjA1M0MyOS45NjQyIDAuNTg3Mzg5IDMwLjc5NTkgMCAzMS43NjUzIDBDMzMuMDYzMSAwIDM0LjExNDggMS4wNTE3OCAzNC4xMTQ4IDIuMzQ5MTdDMzQuMTE0OCAzLjY0NjYxIDMzLjA2MzEgNC42OTgzMyAzMS43NjUzIDQuNjk4MzNDMzAuNzc1MyA0LjY5ODMzIDI5LjkyODcgNC4wODU5NSAyOS41ODMxIDMuMjE5NjdIMTcuOTQ3QzkuNjY0NzggMy4yMTk2NyAyLjgyNDg5IDkuMzk1NTUgMS43ODIgMTcuMzkzM0MxLjczNjY3IDE3LjgwMzkgMS4zODUyMiAxOC4xNTgzIDAuODkzNjY5IDE4LjE1ODNDMC40MjYxMTQgMTguMTU4MyAwLjA0MjA1NTUgMTcuODAwNiAwIDE3LjM0MzlMMC4wMTAwNTgxIDE3LjEwMjhaTTMyLjcxMTQgMi4zNTA3MkMzMi43MTE0IDIuODc0MzMgMzIuMjg3IDMuMjk4NzggMzEuNzYzNyAzLjI5ODc4QzMxLjIzOTggMy4yOTg3OCAzMC44MTUzIDIuODc0MzMgMzAuODE1MyAyLjM1MDcyQzMwLjgxNTMgMS44MjcxMSAzMS4yMzk4IDEuNDAyNjcgMzEuNzYzNyAxLjQwMjY3QzMyLjI4NyAxLjQwMjY3IDMyLjcxMTQgMS44MjcxMSAzMi43MTE0IDIuMzUwNzJaIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXJfNjg2XzY1OTApIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMC4wNjk4MzEgMjMuMzIxNUMtMC4wOTgyODAxIDIyLjMxNzYgMC4yNDg2NjYgMjEuNDk3IDAuODAwODg4IDIwLjgzMDRDMS4zNDY3OCAyMC4xNzIgMi4xMDIxNiAxOS42NTIgMi43ODEyOCAxOS4yMjkzQzIuODYyNzIgMTkuMTc4NyAyLjk1OTI4IDE5LjEyNDMgMy4wNTk2MSAxOS4wNjc2TDMuMDYzMDUgMTkuMDY1NEMzLjcyMTc4IDE4LjY5MzIgNC42NzYzOSAxOC4xNDA0IDQuOTE0MjIgMTcuMDQyNkM0LjkyNDU1IDE2Ljk5NDggNC45MzUxNyAxNi45NDcgNC45NDYgMTYuODk5M0M0Ljk4NSAxNi43MjgyIDUuMDI3MTcgMTYuNTU4MiA1LjA3MjQ1IDE2LjM4OThDNi42Nzc1IDEwLjQxMjYgMTIuMTcyMyA2LjE1MzcxIDE4LjQyOTYgNi4xNTM3MUgzNC4zMDM0QzM0LjY2MjMgNS4zMTUzOCAzNS40OTQ2IDQuNzI3NiAzNi40NjQ2IDQuNzI3NkMzNy43NjE4IDQuNzI3NiAzOC44MTM0IDUuNzc5MjYgMzguODEzNCA3LjA3NzA0QzM4LjgxMzQgOC4zNzQyNiAzNy43NjE4IDkuNDI1OTMgMzYuNDY0NiA5LjQyNTkzQzM1LjQ3MjMgOS40MjU5MyAzNC42MjUxIDguODExNDkgMzQuMjgwMSA3Ljk0MzE1TDI2LjM2MTggNy45NDM3MVY3Ljk0MjZIMTguNDI5NkMxMy4wNTUxIDcuOTQyNiA4LjMyNDc4IDExLjU1MzcgNi44NTc5NCAxNi42NDU5QzYuODA2MzMgMTYuODI1NCA2Ljc1ODc4IDE3LjAwNTkgNi43MTUzMyAxNy4xODg3QzYuNzAzNSAxNy4yMzg3IDYuNjkxOTQgMTcuMjg4NyA2LjY4MDcyIDE3LjMzOTNDNi4yNzU4MyAxOS4xNDcgNC41OTU5NSAyMC4wODI2IDMuNTA1ODMgMjAuNjg5OEwzLjQ1MjM5IDIwLjcxOThDMy4xNjUxNiAyMC44Nzk4IDIuNzA0NTYgMjEuMTgzMSAyLjM0MjUgMjEuNTg3QzEuOTc4ODMgMjEuOTkyIDEuNzQ1MzkgMjIuNDYxNSAxLjgyMzg5IDIyLjk3MDRDMi44NzMzOSAyOS43NzE1IDguNjI0MjggMzYuNzQxNSAxOC40Mjk2IDM2Ljc0MTVIMjYuMzYxOFYzNi43NDA0SDI5LjU5OTZDMjkuOTU1MSAzNS44OTU0IDMwLjc5MDcgMzUuMzAxNSAzMS43NjU3IDM1LjMwMTVDMzMuMDYzNCAzNS4zMDE1IDM0LjExNTEgMzYuMzUzMSAzNC4xMTUxIDM3LjY1MDRDMzQuMTE1MSAzOC45NDgxIDMzLjA2MzQgMzkuOTk5OCAzMS43NjU3IDM5Ljk5OThDMzAuNzc5IDM5Ljk5OTggMjkuOTM1MSAzOS4zOTE1IDI5LjU4NzMgMzguNTMwNEgyNy4zOTc5SDE4LjQyOTZDNy43ODYxMSAzOC41MzA0IDEuMzI4MjggMzAuOTUzMiAwLjA2OTgzMSAyMy4zMjE1Wk0zNy40MTIzIDcuMDc1OTNDMzcuNDEyMyA3LjU5OTI2IDM2Ljk4NzkgOC4wMjM3MSAzNi40NjQ2IDguMDIzNzFDMzUuOTQwNyA4LjAyMzcxIDM1LjUxNjIgNy41OTkyNiAzNS41MTYyIDcuMDc1OTNDMzUuNTE2MiA2LjU1MjA0IDM1Ljk0MDcgNi4xMjc2IDM2LjQ2NDYgNi4xMjc2QzM2Ljk4NzkgNi4xMjc2IDM3LjQxMjMgNi41NTIwNCAzNy40MTIzIDcuMDc1OTNaTTMyLjcxNTEgMzcuNjU1OUMzMi43MTUxIDM4LjE3OTggMzIuMjkwNyAzOC42MDQzIDMxLjc2NzMgMzguNjA0M0MzMS4yNDM0IDM4LjYwNDMgMzAuODE5IDM4LjE3OTggMzAuODE5IDM3LjY1NTlDMzAuODE5IDM3LjEzMjYgMzEuMjQzNCAzNi43MDgxIDMxLjc2NzMgMzYuNzA4MUMzMi4yOTA3IDM2LjcwODEgMzIuNzE1MSAzNy4xMzI2IDMyLjcxNTEgMzcuNjU1OVoiIGZpbGw9InVybCgjcGFpbnQxX2xpbmVhcl82ODZfNjU5MCkiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNi4zNjE3IDMzLjgxMThMMTguNDI5NSAzMy44MTEzQzExLjUwNDUgMzMuODExMyA1LjYwOTggMjguNjQxMyA0LjcxNzI0IDIxLjc4MzVDNC42NTMxOSAyMS4yOTQxIDQuOTk4NjMgMjAuODQ1NyA1LjQ4NzY5IDIwLjc4MTNDNS45NzcwOCAyMC43MTQ2IDYuNDI3NjMgMjEuMDY0NiA2LjQ5MTQ3IDIxLjU1MjlDNy4yNjgwMiAyNy41MjA3IDEyLjQwMDYgMzIuMDIyNCAxOC40Mjk1IDMyLjAyMjRMMzQuMjkyMyAzMi4wMjE4QzM0LjY0NTEgMzEuMTcwMiAzNS40ODQgMzAuNTcwMiAzNi40NjQ1IDMwLjU3MDJDMzcuNzYxNyAzMC41NzAyIDM4LjgxMzQgMzEuNjIxOCAzOC44MTM0IDMyLjkxOTFDMzguODEzNCAzNC4yMTYzIDM3Ljc2MTcgMzUuMjY4NSAzNi40NjQ1IDM1LjI2ODVDMzUuNDgyMyAzNS4yNjg1IDM0LjY0MjMgMzQuNjY2MyAzNC4yOTA2IDMzLjgxMThIMjYuMzYxN1pNMzcuNDEyMyAzMi45MjQxQzM3LjQxMjMgMzMuNDQ3NCAzNi45ODc4IDMzLjg3MTggMzYuNDY0NSAzMy44NzE4QzM1Ljk0MDYgMzMuODcxOCAzNS41MTYyIDMzLjQ0NzQgMzUuNTE2MiAzMi45MjQxQzM1LjUxNjIgMzIuNDAwMiAzNS45NDA2IDMxLjk3NTcgMzYuNDY0NSAzMS45NzU3QzM2Ljk4NzggMzEuOTc1NyAzNy40MTIzIDMyLjQwMDIgMzcuNDEyMyAzMi45MjQxWiIgZmlsbD0idXJsKCNwYWludDJfbGluZWFyXzY4Nl82NTkwKSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyXzY4Nl82NTkwIiB4MT0iMzQuMjkwMyIgeTE9IjMuMDU1NjciIHgyPSIyMy43MzAzIiB5Mj0iMzguMzciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agb2Zmc2V0PSIwLjEwMzYyNyIgc3RvcC1jb2xvcj0iIzE5RkZFMCIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM5RDQ3RkYiLz4KPC9saW5lYXJHcmFkaWVudD4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDFfbGluZWFyXzY4Nl82NTkwIiB4MT0iMzQuMjkwNyIgeTE9IjMuMDU1NDkiIHgyPSIyMy43MzA3IiB5Mj0iMzguMzY5OCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBvZmZzZXQ9IjAuMTAzNjI3IiBzdG9wLWNvbG9yPSIjMTlGRkUwIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzlENDdGRiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50Ml9saW5lYXJfNjg2XzY1OTAiIHgxPSIzNC4yOTA2IiB5MT0iMy4wNTU4NCIgeDI9IjIzLjczMDYiIHkyPSIzOC4zNzAyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIG9mZnNldD0iMC4xMDM2MjciIHN0b3AtY29sb3I9IiMxOUZGRTAiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOUQ0N0ZGIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+Cg==">
+<title>Flappy Pilo · CyCade</title>
+<style>
+  html,body{margin:0;padding:0;height:100%;width:100%;overflow:hidden;background:#060a1f;
+    touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;
+    -webkit-tap-highlight-color:transparent;overscroll-behavior:none;}
+  body{display:flex;align-items:center;justify-content:center;
+    font-family:"Courier New",ui-monospace,Menlo,monospace;}
+  #wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;}
+  canvas{display:block;touch-action:none;image-rendering:pixelated;
+    box-shadow:0 0 40px rgba(0,240,255,.18),0 0 0 2px rgba(155,93,255,.35);}
+</style>
+</head>
+<body>
+<div id="wrap"><canvas id="game" aria-label="Flappy Pilo game"></canvas></div>
+<script>
+(() => {
+"use strict";
+const cvs = document.getElementById('game');
+const ctx = cvs.getContext('2d');
+
+// ---------- constants ----------
+let H = 640;                   // logical height (world units); grows on tall phones
+let W = 400;                   // logical width, adapts to aspect ratio
+const GRAVITY = 1500;          // units/s^2
+const FLAP_V = -470;           // units/s
+const MAX_FALL = 720;
+const ROUND_TIME = 90;
+const PIPE_W = 74;
+const PIPE_SPACING = 250;      // horizontal distance between pipe pairs
+const BASE_SPEED = 165;
+const START_GAP = 210, MIN_GAP = 140;
+const INVULN = 1.5;
+const FLOOR_H = 28;
+const COLORS = { navy:'#060a1f', cyan:'#00f0ff', purple:'#9b5dff', pink:'#ff4fd8', white:'#ffffff', gold:'#ffe66d' };
+const FONT = '"Courier New", ui-monospace, Menlo, monospace';
+
+let scale = 1, dpr = 1;
+function resize(){
+  const vw = window.innerWidth, vh = window.innerHeight;
+  // logical width from aspect ratio, clamped so desktop doesn't get absurdly wide
+  const aspect = vw / vh;
+  if (640 * aspect < 360) { W = 360; H = Math.min(Math.round(360 / aspect), 820); }
+  else { H = 640; W = Math.round(Math.min(640 * aspect, 960)); }
+  scale = Math.min(vw / W, vh / H);
+  dpr = Math.min(window.devicePixelRatio || 1, 3);
+  const cssW = Math.floor(W * scale), cssH = Math.floor(H * scale);
+  cvs.style.width = cssW + 'px'; cvs.style.height = cssH + 'px';
+  cvs.width = Math.floor(cssW * dpr); cvs.height = Math.floor(cssH * dpr);
+  makeStars();
+}
+
+// ---------- background stars ----------
+let stars = [];
+function makeStars(){
+  const n = Math.round(W * H / 2600);
+  stars = [];
+  for (let i=0;i<n;i++) stars.push({
+    x: Math.random()*W, y: Math.random()*(H-FLOOR_H),
+    r: Math.random()<0.15 ? 2 : 1, p: Math.random()*Math.PI*2,
+    s: 0.8 + Math.random()*2.5, layer: Math.random()<0.5 ? 0.15 : 0.35,
+    c: Math.random()<0.2 ? COLORS.cyan : (Math.random()<0.15 ? COLORS.purple : '#cfe8ff')
+  });
+}
+
+// ---------- state ----------
+const STATE = { START:0, PLAY:1, OVER:2 };
+let state = STATE.START;
+let best = 0;
+try { best = parseInt(localStorage.getItem('flappyPiloBest')||'0',10) || 0; } catch(e){}
+let pilo, pipes, coins, particles, floaters, score, timeLeft, lives, invuln, elapsed, speed, gap, distSincePipe, newBest, shake, overDelay, worldX;
+
+function reset(){
+  pilo = { x: Math.round(W*0.28), y: H*0.45, vy: 0, rot: 0, r: 17, bob: 0 };
+  pipes = []; coins = []; particles = []; floaters = [];
+  score = 0; timeLeft = ROUND_TIME; lives = 3; invuln = 0; elapsed = 0;
+  speed = BASE_SPEED; gap = START_GAP; distSincePipe = PIPE_SPACING - 120; newBest = false; shake = 0; overDelay = 0; worldX = 0;
+}
+reset();
+
+function startGame(){ reset(); state = STATE.PLAY; flap(); }
+
+function flap(){
+  pilo.vy = FLAP_V;
+  for (let i=0;i<6;i++) spawnSpark(pilo.x-6, pilo.y+8, -60-Math.random()*80, 40+Math.random()*90, COLORS.cyan);
+  beep(660, 0.06, 'square', 0.03);
+}
+
+// ---------- input ----------
+const playBtn = { x:0, y:0, w:200, h:54 };
+function toLogical(clientX, clientY){
+  const r = cvs.getBoundingClientRect();
+  return { x:(clientX - r.left) / r.width * W, y:(clientY - r.top) / r.height * H };
+}
+function press(lx, ly){
+  ensureAudio();
+  if (state === STATE.START) { startGame(); return; }
+  if (state === STATE.PLAY) { flap(); return; }
+  if (state === STATE.OVER && overDelay <= 0) {
+    if (lx === undefined || (lx >= playBtn.x && lx <= playBtn.x+playBtn.w && ly >= playBtn.y && ly <= playBtn.y+playBtn.h)) startGame();
+  }
+}
+cvs.addEventListener('pointerdown', e => { e.preventDefault(); const p = toLogical(e.clientX, e.clientY); press(p.x, p.y); }, {passive:false});
+window.addEventListener('keydown', e => {
+  if (e.code === 'Space' || e.code === 'ArrowUp' || e.code === 'KeyW' || e.code === 'Enter') {
+    e.preventDefault(); if (!e.repeat) press();
+  }
+});
+['touchstart','touchmove','touchend','gesturestart','dblclick','contextmenu'].forEach(t =>
+  document.addEventListener(t, e => { if (e.cancelable) e.preventDefault(); }, {passive:false}));
+window.addEventListener('resize', () => { const oldW = W; resize(); if (pilo && state!==STATE.PLAY) pilo.x = Math.round(W*0.28); });
+document.addEventListener('visibilitychange', () => { last = performance.now(); });
+
+// ---------- tiny audio ----------
+let actx = null;
+function ensureAudio(){ try { if (!actx) actx = new (window.AudioContext||window.webkitAudioContext)(); if (actx.state==='suspended') actx.resume(); } catch(e){} }
+function beep(freq, dur, type, vol){
+  if (!actx) return;
+  try {
+    const o = actx.createOscillator(), g = actx.createGain();
+    o.type = type||'square'; o.frequency.value = freq; g.gain.value = vol||0.04;
+    g.gain.exponentialRampToValueAtTime(0.0001, actx.currentTime + dur);
+    o.connect(g); g.connect(actx.destination); o.start(); o.stop(actx.currentTime + dur);
+  } catch(e){}
+}
+
+// ---------- spawning ----------
+function spawnPipe(){
+  const margin = 70;
+  const gapY = margin + gap/2 + Math.random() * (H - FLOOR_H - 2*margin - gap);
+  const p = { x: W + 10, gapY, gap, passed:false, seed: Math.random()*1000 };
+  pipes.push(p);
+  // coin inside the gap (most of the time), sometimes between pipes
+  if (Math.random() < 0.85) {
+    const between = Math.random() < 0.35;
+    coins.push({ x: p.x + PIPE_W/2 + (between ? PIPE_SPACING/2 : 0),
+      y: between ? H*0.2 + Math.random()*(H*0.55) : gapY + (Math.random()-0.5)*(gap*0.4),
+      r: 13, taken:false, t: Math.random()*6 });
+  }
+}
+function spawnSpark(x,y,vx,vy,color){
+  particles.push({ x,y,vx,vy,life:0.5+Math.random()*0.35,max:0.85,color,size:Math.random()<0.5?2:3 });
+}
+function addFloater(x,y,text,color){ floaters.push({x,y,text,color,life:0.9}); }
+
+// ---------- collisions ----------
+function circleRect(cx,cy,r,rx,ry,rw,rh){
+  const nx = Math.max(rx, Math.min(cx, rx+rw)), ny = Math.max(ry, Math.min(cy, ry+rh));
+  const dx = cx-nx, dy = cy-ny; return dx*dx+dy*dy < r*r;
+}
+function hurt(kind){
+  if (invuln > 0) return;
+  lives--; invuln = INVULN; shake = 0.35;
+  beep(140, 0.25, 'sawtooth', 0.05);
+  for (let i=0;i<16;i++){ const a=Math.random()*Math.PI*2, s=80+Math.random()*180; spawnSpark(pilo.x,pilo.y,Math.cos(a)*s,Math.sin(a)*s,COLORS.pink); }
+  if (kind === 'floor') { pilo.y = H - FLOOR_H - pilo.r - 2; pilo.vy = FLAP_V*0.9; }
+  else if (kind === 'ceil') { pilo.y = pilo.r + 2; pilo.vy = 120; }
+  if (lives <= 0) endGame();
+}
+function endGame(){
+  state = STATE.OVER; overDelay = 0.6;
+  if (score > best) { best = score; newBest = true; try { localStorage.setItem('flappyPiloBest', String(best)); } catch(e){} }
+  beep(220, 0.4, 'triangle', 0.05);
+}
+
+// ---------- update ----------
+function update(dt){
+  // stars twinkle always; parallax drift
+  const drift = state===STATE.PLAY ? speed : 40;
+  for (const s of stars){ s.x -= drift*s.layer*dt; if (s.x < -2) { s.x += W+4; s.y = Math.random()*(H-FLOOR_H); } }
+  worldX += drift*dt;
+
+  for (const p of particles){ p.x += p.vx*dt; p.y += p.vy*dt; p.vy += 300*dt; p.life -= dt; }
+  particles = particles.filter(p => p.life > 0);
+  for (const f of floaters){ f.y -= 50*dt; f.life -= dt; }
+  floaters = floaters.filter(f => f.life > 0);
+  if (shake > 0) shake = Math.max(0, shake - dt);
+
+  if (state === STATE.START) { pilo.bob += dt; pilo.y = H*0.45 + Math.sin(pilo.bob*3)*12; pilo.rot = Math.sin(pilo.bob*3)*0.12; trail(dt); return; }
+  if (state === STATE.OVER) { overDelay -= dt; pilo.vy = Math.min(pilo.vy + GRAVITY*dt, MAX_FALL);
+    pilo.y = Math.min(pilo.y + pilo.vy*dt, H - FLOOR_H - pilo.r); pilo.rot += dt*3; return; }
+
+  // --- PLAY ---
+  elapsed += dt;
+  timeLeft -= dt;
+  if (timeLeft <= 0) { timeLeft = 0; endGame(); return; }
+  if (invuln > 0) invuln -= dt;
+
+  // difficulty ramps with time
+  const t = Math.min(elapsed / ROUND_TIME, 1);
+  gap = START_GAP - (START_GAP - MIN_GAP) * t;
+  speed = BASE_SPEED + 70 * t;
+
+  // player physics
+  pilo.vy = Math.min(pilo.vy + GRAVITY*dt, MAX_FALL);
+  pilo.y += pilo.vy*dt;
+  const targetRot = Math.max(-0.45, Math.min(pilo.vy / 650, 1.1)) ;
+  pilo.rot += (targetRot - pilo.rot) * Math.min(1, dt*10);
+  trail(dt);
+
+  if (pilo.y + pilo.r >= H - FLOOR_H) { pilo.y = H - FLOOR_H - pilo.r; if (invuln<=0) hurt('floor'); else pilo.vy = Math.min(pilo.vy, FLAP_V*0.6); }
+  if (pilo.y - pilo.r <= 0) { pilo.y = pilo.r; if (invuln<=0) hurt('ceil'); else pilo.vy = Math.max(pilo.vy, 60); }
+  if (state !== STATE.PLAY) return;
+
+  // pipes
+  distSincePipe += speed*dt;
+  if (distSincePipe >= PIPE_SPACING) { distSincePipe -= PIPE_SPACING; spawnPipe(); }
+  const hitR = pilo.r * 0.78;
+  for (const p of pipes){
+    p.x -= speed*dt;
+    if (!p.passed && p.x + PIPE_W < pilo.x - pilo.r) {
+      p.passed = true; score += 10; addFloater(pilo.x, pilo.y-30, '+10', COLORS.purple); beep(880,0.05,'square',0.025);
+    }
+    const top = p.gapY - p.gap/2, bot = p.gapY + p.gap/2;
+    if (invuln <= 0 && (circleRect(pilo.x,pilo.y,hitR,p.x,-50,PIPE_W,top+50) || circleRect(pilo.x,pilo.y,hitR,p.x,bot,PIPE_W,H-bot))) {
+      hurt('pipe'); if (state !== STATE.PLAY) return;
+    }
+  }
+  pipes = pipes.filter(p => p.x > -PIPE_W - 20);
+
+  for (const c of coins){
+    c.x -= speed*dt; c.t += dt;
+    if (!c.taken) {
+      const dx = c.x - pilo.x, dy = c.y - pilo.y;
+      if (dx*dx + dy*dy < (c.r + pilo.r)**2) {
+        c.taken = true; score += 25; addFloater(c.x, c.y-20, '+25', COLORS.cyan);
+        beep(1046,0.06,'square',0.03); setTimeout(()=>beep(1568,0.08,'square',0.03),60);
+        for (let i=0;i<12;i++){ const a=Math.random()*Math.PI*2, s=60+Math.random()*140; spawnSpark(c.x,c.y,Math.cos(a)*s,Math.sin(a)*s,COLORS.cyan); }
+      }
+    }
+  }
+  coins = coins.filter(c => c.x > -30 && !c.taken);
+}
+let trailAcc = 0;
+function trail(dt){
+  trailAcc += dt;
+  while (trailAcc > 0.03) { trailAcc -= 0.03;
+    const cols = [COLORS.cyan, COLORS.purple, COLORS.white, COLORS.gold];
+    spawnSpark(pilo.x - pilo.r*0.8, pilo.y + (Math.random()-0.5)*pilo.r, -(state===STATE.PLAY?speed:60)*0.6 - Math.random()*40, (Math.random()-0.5)*40, cols[(Math.random()*cols.length)|0]);
+  }
+}
+
+// ---------- drawing helpers ----------
+function starPath(cx, cy, outer, inner, points){
+  ctx.beginPath();
+  for (let i=0;i<points*2;i++){
+    const r = i%2===0 ? outer : inner;
+    const a = -Math.PI/2 + i*Math.PI/points;
+    const x = cx + Math.cos(a)*r, y = cy + Math.sin(a)*r;
+    i===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+  }
+  ctx.closePath();
+}
+function roundRect(x,y,w,h,r){
+  ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r);
+  ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath();
+}
+function text(str, x, y, size, color, align, glow){
+  ctx.font = `bold ${size}px ${FONT}`; ctx.textAlign = align||'center'; ctx.textBaseline = 'middle';
+  if (glow){ ctx.shadowColor = glow; ctx.shadowBlur = 14; }
+  ctx.fillStyle = 'rgba(0,0,0,.55)'; ctx.fillText(str, x+3, y+3);
+  ctx.fillStyle = color; ctx.fillText(str, x, y);
+  ctx.shadowBlur = 0;
+}
+
+function drawBackground(now){
+  const g = ctx.createLinearGradient(0,0,0,H);
+  g.addColorStop(0,'#03061a'); g.addColorStop(0.6,'#0a1033'); g.addColorStop(1,'#140c3a');
+  ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
+  // nebula glows
+  ctx.globalAlpha = 0.18;
+  let ng = ctx.createRadialGradient(W*0.8,H*0.25,0,W*0.8,H*0.25,H*0.45); ng.addColorStop(0,COLORS.purple); ng.addColorStop(1,'transparent');
+  ctx.fillStyle = ng; ctx.fillRect(0,0,W,H);
+  ng = ctx.createRadialGradient(W*0.15,H*0.7,0,W*0.15,H*0.7,H*0.4); ng.addColorStop(0,'#0077aa'); ng.addColorStop(1,'transparent');
+  ctx.fillStyle = ng; ctx.fillRect(0,0,W,H);
+  ctx.globalAlpha = 1;
+  // twinkling stars (pixel squares)
+  for (const s of stars){
+    const a = 0.35 + 0.65 * (0.5 + 0.5*Math.sin(now*0.001*s.s + s.p));
+    ctx.globalAlpha = a; ctx.fillStyle = s.c;
+    ctx.fillRect(Math.round(s.x), Math.round(s.y), s.r, s.r);
+    if (s.r === 2 && a > 0.85){ ctx.globalAlpha = (a-0.85)*4; ctx.fillRect(Math.round(s.x)-2, Math.round(s.y), 6, 1); ctx.fillRect(Math.round(s.x)+0.5, Math.round(s.y)-2, 1, 6); }
+  }
+  ctx.globalAlpha = 1;
+}
+
+function drawFloor(){
+  const y = H - FLOOR_H;
+  ctx.fillStyle = '#0b0f2e'; ctx.fillRect(0,y,W,FLOOR_H);
+  ctx.fillStyle = COLORS.cyan; ctx.shadowColor = COLORS.cyan; ctx.shadowBlur = 10;
+  ctx.fillRect(0,y,W,2); ctx.shadowBlur = 0;
+  // scrolling grid lines
+  ctx.strokeStyle = 'rgba(155,93,255,.45)'; ctx.lineWidth = 1;
+  const off = -(worldX % 24);
+  ctx.beginPath();
+  for (let x = off; x < W; x += 24){ ctx.moveTo(x+0.5, y+3); ctx.lineTo(x - 10 + 0.5, H); }
+  ctx.moveTo(0, y+14.5); ctx.lineTo(W, y+14.5);
+  ctx.stroke();
+  // ceiling hint line
+  ctx.fillStyle = 'rgba(0,240,255,.25)'; ctx.fillRect(0,0,W,2);
+}
+
+function drawRack(x, y, w, h, isTop, seed, now){
+  if (h <= 0) return;
+  // body
+  ctx.fillStyle = '#10163a'; ctx.fillRect(x, y, w, h);
+  ctx.fillStyle = '#1a2252'; ctx.fillRect(x+3, y, 4, h);       // left highlight
+  ctx.fillStyle = '#080b22'; ctx.fillRect(x+w-6, y, 6, h);     // right shade
+  // rack units
+  const unitH = 22;
+  const startY = isTop ? y + h - unitH*Math.floor(h/unitH) : y;
+  let i = 0;
+  for (let uy = isTop ? y + h - unitH : y + 12; isTop ? uy > y - unitH : uy < y + h; uy += isTop ? -unitH : unitH, i++){
+    ctx.fillStyle = '#060920'; ctx.fillRect(x+9, uy+3, w-18, unitH-6);
+    ctx.fillStyle = '#1d2660'; ctx.fillRect(x+9, uy+3, w-18, 1);
+    // vents
+    ctx.fillStyle = '#141b45';
+    for (let vx = x+30; vx < x+w-14; vx += 5) ctx.fillRect(vx, uy+7, 2, unitH-14);
+    // LEDs
+    const k = Math.sin(seed + i*1.7);
+    for (let l=0;l<2;l++){
+      const on = Math.sin(now*0.004*(1+l) + seed*3 + i*2.3 + l) > -0.2;
+      const col = (k > 0.6 && l===1) ? COLORS.purple : COLORS.cyan;
+      ctx.fillStyle = on ? col : '#123040';
+      if (on){ ctx.shadowColor = col; ctx.shadowBlur = 8; }
+      ctx.fillRect(x+14 + l*7, uy+unitH/2-2, 4, 4);
+      ctx.shadowBlur = 0;
+    }
+  }
+  // cap (lip) at the gap end
+  const capH = 14, capY = isTop ? y + h - capH : y;
+  ctx.fillStyle = '#1b2463'; ctx.fillRect(x-5, capY, w+10, capH);
+  ctx.fillStyle = COLORS.cyan; ctx.shadowColor = COLORS.cyan; ctx.shadowBlur = 12;
+  ctx.fillRect(x-5, isTop ? capY + capH - 3 : capY, w+10, 3);
+  ctx.shadowBlur = 0;
+  // outline
+  ctx.strokeStyle = 'rgba(155,93,255,.6)'; ctx.lineWidth = 2; ctx.strokeRect(x+1, y+(isTop?-2:1), w-2, h+1);
+}
+
+function drawPipes(now){
+  for (const p of pipes){
+    const top = p.gapY - p.gap/2, bot = p.gapY + p.gap/2;
+    drawRack(p.x, 0, PIPE_W, top, true, p.seed, now);
+    drawRack(p.x, bot, PIPE_W, H - FLOOR_H - bot, false, p.seed+5, now);
+  }
+}
+
+// Cysic symbol: exact asset from CyCade (/brand/cysic-symbol.svg), inlined as a data URI.
+const CYSIC_SVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzkiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAzOSA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wLjAxMDA1ODEgMTcuMTAyOEwwLjAxMTIyMzcgMTcuMDk0NEMxLjE5NzUgOC4yNDc3OCA4Ljc3NTE3IDEuNDI1MTcgMTcuOTQ3IDEuNDI1MTdIMjkuNjA1M0MyOS45NjQyIDAuNTg3Mzg5IDMwLjc5NTkgMCAzMS43NjUzIDBDMzMuMDYzMSAwIDM0LjExNDggMS4wNTE3OCAzNC4xMTQ4IDIuMzQ5MTdDMzQuMTE0OCAzLjY0NjYxIDMzLjA2MzEgNC42OTgzMyAzMS43NjUzIDQuNjk4MzNDMzAuNzc1MyA0LjY5ODMzIDI5LjkyODcgNC4wODU5NSAyOS41ODMxIDMuMjE5NjdIMTcuOTQ3QzkuNjY0NzggMy4yMTk2NyAyLjgyNDg5IDkuMzk1NTUgMS43ODIgMTcuMzkzM0MxLjczNjY3IDE3LjgwMzkgMS4zODUyMiAxOC4xNTgzIDAuODkzNjY5IDE4LjE1ODNDMC40MjYxMTQgMTguMTU4MyAwLjA0MjA1NTUgMTcuODAwNiAwIDE3LjM0MzlMMC4wMTAwNTgxIDE3LjEwMjhaTTMyLjcxMTQgMi4zNTA3MkMzMi43MTE0IDIuODc0MzMgMzIuMjg3IDMuMjk4NzggMzEuNzYzNyAzLjI5ODc4QzMxLjIzOTggMy4yOTg3OCAzMC44MTUzIDIuODc0MzMgMzAuODE1MyAyLjM1MDcyQzMwLjgxNTMgMS44MjcxMSAzMS4yMzk4IDEuNDAyNjcgMzEuNzYzNyAxLjQwMjY3QzMyLjI4NyAxLjQwMjY3IDMyLjcxMTQgMS44MjcxMSAzMi43MTE0IDIuMzUwNzJaIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXJfNjg2XzY1OTApIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMC4wNjk4MzEgMjMuMzIxNUMtMC4wOTgyODAxIDIyLjMxNzYgMC4yNDg2NjYgMjEuNDk3IDAuODAwODg4IDIwLjgzMDRDMS4zNDY3OCAyMC4xNzIgMi4xMDIxNiAxOS42NTIgMi43ODEyOCAxOS4yMjkzQzIuODYyNzIgMTkuMTc4NyAyLjk1OTI4IDE5LjEyNDMgMy4wNTk2MSAxOS4wNjc2TDMuMDYzMDUgMTkuMDY1NEMzLjcyMTc4IDE4LjY5MzIgNC42NzYzOSAxOC4xNDA0IDQuOTE0MjIgMTcuMDQyNkM0LjkyNDU1IDE2Ljk5NDggNC45MzUxNyAxNi45NDcgNC45NDYgMTYuODk5M0M0Ljk4NSAxNi43MjgyIDUuMDI3MTcgMTYuNTU4MiA1LjA3MjQ1IDE2LjM4OThDNi42Nzc1IDEwLjQxMjYgMTIuMTcyMyA2LjE1MzcxIDE4LjQyOTYgNi4xNTM3MUgzNC4zMDM0QzM0LjY2MjMgNS4zMTUzOCAzNS40OTQ2IDQuNzI3NiAzNi40NjQ2IDQuNzI3NkMzNy43NjE4IDQuNzI3NiAzOC44MTM0IDUuNzc5MjYgMzguODEzNCA3LjA3NzA0QzM4LjgxMzQgOC4zNzQyNiAzNy43NjE4IDkuNDI1OTMgMzYuNDY0NiA5LjQyNTkzQzM1LjQ3MjMgOS40MjU5MyAzNC42MjUxIDguODExNDkgMzQuMjgwMSA3Ljk0MzE1TDI2LjM2MTggNy45NDM3MVY3Ljk0MjZIMTguNDI5NkMxMy4wNTUxIDcuOTQyNiA4LjMyNDc4IDExLjU1MzcgNi44NTc5NCAxNi42NDU5QzYuODA2MzMgMTYuODI1NCA2Ljc1ODc4IDE3LjAwNTkgNi43MTUzMyAxNy4xODg3QzYuNzAzNSAxNy4yMzg3IDYuNjkxOTQgMTcuMjg4NyA2LjY4MDcyIDE3LjMzOTNDNi4yNzU4MyAxOS4xNDcgNC41OTU5NSAyMC4wODI2IDMuNTA1ODMgMjAuNjg5OEwzLjQ1MjM5IDIwLjcxOThDMy4xNjUxNiAyMC44Nzk4IDIuNzA0NTYgMjEuMTgzMSAyLjM0MjUgMjEuNTg3QzEuOTc4ODMgMjEuOTkyIDEuNzQ1MzkgMjIuNDYxNSAxLjgyMzg5IDIyLjk3MDRDMi44NzMzOSAyOS43NzE1IDguNjI0MjggMzYuNzQxNSAxOC40Mjk2IDM2Ljc0MTVIMjYuMzYxOFYzNi43NDA0SDI5LjU5OTZDMjkuOTU1MSAzNS44OTU0IDMwLjc5MDcgMzUuMzAxNSAzMS43NjU3IDM1LjMwMTVDMzMuMDYzNCAzNS4zMDE1IDM0LjExNTEgMzYuMzUzMSAzNC4xMTUxIDM3LjY1MDRDMzQuMTE1MSAzOC45NDgxIDMzLjA2MzQgMzkuOTk5OCAzMS43NjU3IDM5Ljk5OThDMzAuNzc5IDM5Ljk5OTggMjkuOTM1MSAzOS4zOTE1IDI5LjU4NzMgMzguNTMwNEgyNy4zOTc5SDE4LjQyOTZDNy43ODYxMSAzOC41MzA0IDEuMzI4MjggMzAuOTUzMiAwLjA2OTgzMSAyMy4zMjE1Wk0zNy40MTIzIDcuMDc1OTNDMzcuNDEyMyA3LjU5OTI2IDM2Ljk4NzkgOC4wMjM3MSAzNi40NjQ2IDguMDIzNzFDMzUuOTQwNyA4LjAyMzcxIDM1LjUxNjIgNy41OTkyNiAzNS41MTYyIDcuMDc1OTNDMzUuNTE2MiA2LjU1MjA0IDM1Ljk0MDcgNi4xMjc2IDM2LjQ2NDYgNi4xMjc2QzM2Ljk4NzkgNi4xMjc2IDM3LjQxMjMgNi41NTIwNCAzNy40MTIzIDcuMDc1OTNaTTMyLjcxNTEgMzcuNjU1OUMzMi43MTUxIDM4LjE3OTggMzIuMjkwNyAzOC42MDQzIDMxLjc2NzMgMzguNjA0M0MzMS4yNDM0IDM4LjYwNDMgMzAuODE5IDM4LjE3OTggMzAuODE5IDM3LjY1NTlDMzAuODE5IDM3LjEzMjYgMzEuMjQzNCAzNi43MDgxIDMxLjc2NzMgMzYuNzA4MUMzMi4yOTA3IDM2LjcwODEgMzIuNzE1MSAzNy4xMzI2IDMyLjcxNTEgMzcuNjU1OVoiIGZpbGw9InVybCgjcGFpbnQxX2xpbmVhcl82ODZfNjU5MCkiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNi4zNjE3IDMzLjgxMThMMTguNDI5NSAzMy44MTEzQzExLjUwNDUgMzMuODExMyA1LjYwOTggMjguNjQxMyA0LjcxNzI0IDIxLjc4MzVDNC42NTMxOSAyMS4yOTQxIDQuOTk4NjMgMjAuODQ1NyA1LjQ4NzY5IDIwLjc4MTNDNS45NzcwOCAyMC43MTQ2IDYuNDI3NjMgMjEuMDY0NiA2LjQ5MTQ3IDIxLjU1MjlDNy4yNjgwMiAyNy41MjA3IDEyLjQwMDYgMzIuMDIyNCAxOC40Mjk1IDMyLjAyMjRMMzQuMjkyMyAzMi4wMjE4QzM0LjY0NTEgMzEuMTcwMiAzNS40ODQgMzAuNTcwMiAzNi40NjQ1IDMwLjU3MDJDMzcuNzYxNyAzMC41NzAyIDM4LjgxMzQgMzEuNjIxOCAzOC44MTM0IDMyLjkxOTFDMzguODEzNCAzNC4yMTYzIDM3Ljc2MTcgMzUuMjY4NSAzNi40NjQ1IDM1LjI2ODVDMzUuNDgyMyAzNS4yNjg1IDM0LjY0MjMgMzQuNjY2MyAzNC4yOTA2IDMzLjgxMThIMjYuMzYxN1pNMzcuNDEyMyAzMi45MjQxQzM3LjQxMjMgMzMuNDQ3NCAzNi45ODc4IDMzLjg3MTggMzYuNDY0NSAzMy44NzE4QzM1Ljk0MDYgMzMuODcxOCAzNS41MTYyIDMzLjQ0NzQgMzUuNTE2MiAzMi45MjQxQzM1LjUxNjIgMzIuNDAwMiAzNS45NDA2IDMxLjk3NTcgMzYuNDY0NSAzMS45NzU3QzM2Ljk4NzggMzEuOTc1NyAzNy40MTIzIDMyLjQwMDIgMzcuNDEyMyAzMi45MjQxWiIgZmlsbD0idXJsKCNwYWludDJfbGluZWFyXzY4Nl82NTkwKSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyXzY4Nl82NTkwIiB4MT0iMzQuMjkwMyIgeTE9IjMuMDU1NjciIHgyPSIyMy43MzAzIiB5Mj0iMzguMzciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agb2Zmc2V0PSIwLjEwMzYyNyIgc3RvcC1jb2xvcj0iIzE5RkZFMCIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM5RDQ3RkYiLz4KPC9saW5lYXJHcmFkaWVudD4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDFfbGluZWFyXzY4Nl82NTkwIiB4MT0iMzQuMjkwNyIgeTE9IjMuMDU1NDkiIHgyPSIyMy43MzA3IiB5Mj0iMzguMzY5OCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBvZmZzZXQ9IjAuMTAzNjI3IiBzdG9wLWNvbG9yPSIjMTlGRkUwIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzlENDdGRiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50Ml9saW5lYXJfNjg2XzY1OTAiIHgxPSIzNC4yOTA2IiB5MT0iMy4wNTU4NCIgeDI9IjIzLjczMDYiIHkyPSIzOC4zNzAyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIG9mZnNldD0iMC4xMDM2MjciIHN0b3AtY29sb3I9IiMxOUZGRTAiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOUQ0N0ZGIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+Cg==";
+const cysicImg = new Image();
+let cysicSprite = null;                       // pre-rasterised for speed / crispness
+cysicImg.onload = () => {
+  const S = 128, c = document.createElement('canvas'); c.width = c.height = S;
+  const g = c.getContext('2d');
+  const iw = cysicImg.naturalWidth || 39, ih = cysicImg.naturalHeight || 40, k = S / Math.max(iw, ih);
+  g.drawImage(cysicImg, (S - iw*k)/2, (S - ih*k)/2, iw*k, ih*k);
+  cysicSprite = c;
+};
+cysicImg.src = CYSIC_SVG;
+
+// Same recipe as Midnight Drift: black disc, thin #22D3EE ring, Cysic mark at 28/42 of the coin diameter.
+function drawCoin(c){
+  const pulse = 0.5 + 0.5*Math.sin(c.t*5);
+  const R = c.r + 1;                          // visual radius (hitbox stays c.r)
+  ctx.save(); ctx.translate(c.x, c.y + Math.sin(c.t*4)*3);
+  ctx.shadowColor = '#22D3EE'; ctx.shadowBlur = 10 + pulse*10;
+  ctx.fillStyle = '#000'; ctx.beginPath(); ctx.arc(0,0,R,0,Math.PI*2); ctx.fill();
+  ctx.lineWidth = 2; ctx.strokeStyle = '#22D3EE'; ctx.stroke();
+  ctx.shadowBlur = 0;
+  const m = R * 28/21;                        // logo size relative to ring, as in Drift
+  if (cysicSprite) ctx.drawImage(cysicSprite, -m/2, -m/2, m, m);
+  ctx.restore();
+}
+
+function drawPilo(now){
+  if (invuln > 0 && state === STATE.PLAY && Math.floor(now/90)%2===0) return; // blink
+  const r = pilo.r * 1.35;
+  ctx.save(); ctx.translate(pilo.x, pilo.y); ctx.rotate(pilo.rot);
+  // glow
+  ctx.shadowColor = 'rgba(200,230,255,.9)'; ctx.shadowBlur = 16;
+  starPath(0, 0, r, r*0.52, 5);
+  ctx.fillStyle = '#ffffff'; ctx.fill();
+  ctx.shadowBlur = 0;
+  ctx.lineWidth = 2.5; ctx.strokeStyle = '#b9c6ff'; ctx.lineJoin = 'round'; ctx.stroke();
+  // soft shading
+  starPath(2, 3, r*0.82, r*0.42, 5); ctx.fillStyle = 'rgba(160,180,255,.18)'; ctx.fill();
+  // face
+  const blink = (Math.floor(now/2600) % 1 === 0) && (now % 2600 < 120);
+  ctx.fillStyle = '#1a1440';
+  if (blink){ ctx.fillRect(-7, 1, 5, 2); ctx.fillRect(3, 1, 5, 2); }
+  else { ctx.beginPath(); ctx.arc(-4.5, 2, 2.6, 0, Math.PI*2); ctx.arc(5.5, 2, 2.6, 0, Math.PI*2); ctx.fill();
+    ctx.fillStyle = '#fff'; ctx.fillRect(-5.5, 0.5, 1.4, 1.4); ctx.fillRect(4.5, 0.5, 1.4, 1.4); }
+  // cheeks
+  ctx.fillStyle = 'rgba(255,120,200,.55)'; ctx.fillRect(-11, 6, 4, 2); ctx.fillRect(9, 6, 4, 2);
+  // smile
+  ctx.strokeStyle = '#1a1440'; ctx.lineWidth = 1.6; ctx.beginPath(); ctx.arc(0.5, 6, 3, 0.15*Math.PI, 0.85*Math.PI); ctx.stroke();
+  // purple cap on the top point
+  ctx.save(); ctx.translate(0, -r*0.55); ctx.rotate(-0.12);
+  ctx.fillStyle = '#7a3cf0';
+  ctx.beginPath(); ctx.moveTo(-9, 2); ctx.quadraticCurveTo(-8, -10, 1, -10); ctx.quadraticCurveTo(10, -10, 10, 2); ctx.closePath(); ctx.fill();
+  ctx.fillStyle = COLORS.purple; ctx.fillRect(-9, -1, 19, 4);       // band
+  ctx.fillStyle = '#5b22c8'; ctx.beginPath(); ctx.ellipse(10, 2.5, 8, 2.6, 0, 0, Math.PI*2); ctx.fill(); // brim
+  ctx.fillStyle = COLORS.cyan; ctx.fillRect(-1, -12, 3, 3);        // button
+  ctx.restore();
+  ctx.restore();
+}
+
+function drawParticles(){
+  for (const p of particles){
+    ctx.globalAlpha = Math.max(0, p.life / p.max);
+    ctx.fillStyle = p.color; ctx.fillRect(Math.round(p.x), Math.round(p.y), p.size, p.size);
+  }
+  ctx.globalAlpha = 1;
+  for (const f of floaters){ ctx.globalAlpha = Math.min(1, f.life*2); text(f.text, f.x, f.y, 18, f.color, 'center', f.color); }
+  ctx.globalAlpha = 1;
+}
+
+function drawHeart(x, y, s, filled){
+  const px = [[0,1,1,0,1,1,0],[1,1,1,1,1,1,1],[1,1,1,1,1,1,1],[0,1,1,1,1,1,0],[0,0,1,1,1,0,0],[0,0,0,1,0,0,0]];
+  if (filled){ ctx.shadowColor = COLORS.pink; ctx.shadowBlur = 8; }
+  ctx.fillStyle = filled ? COLORS.pink : 'rgba(255,79,216,.18)';
+  for (let r=0;r<px.length;r++) for (let c=0;c<7;c++) if (px[r][c]) ctx.fillRect(x + c*s, y + r*s, s, s);
+  ctx.shadowBlur = 0;
+}
+
+function drawHUD(){
+  const pad = 12;
+  // panel
+  ctx.fillStyle = 'rgba(6,10,31,.6)'; roundRect(pad-4, pad-4, W - 2*pad + 8, 42, 6); ctx.fill();
+  ctx.strokeStyle = 'rgba(0,240,255,.35)'; ctx.lineWidth = 1.5; ctx.stroke();
+  const fs = W < 420 ? 15 : 18;
+  ctx.font = `bold ${fs}px ${FONT}`; ctx.textBaseline = 'middle';
+  ctx.textAlign = 'left'; ctx.fillStyle = COLORS.cyan; ctx.shadowColor = COLORS.cyan; ctx.shadowBlur = 8;
+  ctx.fillText('SCORE ' + String(score).padStart(4,'0'), pad+4, pad+17);
+  ctx.shadowBlur = 0;
+  const tl = Math.ceil(timeLeft);
+  ctx.textAlign = 'center'; ctx.fillStyle = tl <= 10 && Math.floor(timeLeft*4)%2===0 ? COLORS.pink : COLORS.purple;
+  ctx.shadowColor = ctx.fillStyle; ctx.shadowBlur = 8;
+  ctx.fillText('TIME ' + String(tl).padStart(2,'0'), W/2 + (W<420?18:0), pad+17);
+  ctx.shadowBlur = 0;
+  const hs = 3, hw = 7*hs + 5;
+  for (let i=0;i<3;i++) drawHeart(W - pad - 6 - (3-i)*hw + 5, pad+8, hs, i < lives);
+}
+
+function button(label, cx, cy, now){
+  playBtn.w = 210; playBtn.h = 54; playBtn.x = cx - playBtn.w/2; playBtn.y = cy - playBtn.h/2;
+  const pulse = 0.5 + 0.5*Math.sin(now*0.006);
+  ctx.shadowColor = COLORS.cyan; ctx.shadowBlur = 10 + pulse*14;
+  ctx.fillStyle = '#0a1a3a'; roundRect(playBtn.x, playBtn.y, playBtn.w, playBtn.h, 6); ctx.fill();
+  ctx.lineWidth = 3; ctx.strokeStyle = COLORS.cyan; ctx.stroke(); ctx.shadowBlur = 0;
+  text(label, cx, cy+1, 22, '#ffffff', 'center', COLORS.cyan);
+}
+
+function drawStart(now){
+  const cy = H*0.2;
+  const big = Math.min(46, W/8.2);
+  text('FLAPPY', W/2, cy, big, COLORS.cyan, 'center', COLORS.cyan);
+  text('PILO', W/2, cy + big*1.15, big*1.25, COLORS.purple, 'center', COLORS.purple);
+  text('· CYCADE ARCADE ·', W/2, cy + big*2.3, 13, '#8fa6ff', 'center');
+  const y2 = H*0.66;
+  ctx.fillStyle = 'rgba(6,10,31,.7)'; roundRect(W/2-Math.min(170,W/2-10), y2-34, Math.min(340,W-20), 92, 8); ctx.fill();
+  ctx.strokeStyle = 'rgba(155,93,255,.6)'; ctx.lineWidth = 2; ctx.stroke();
+  text('Tap / Space to flap.', W/2, y2-10, Math.min(18, W/22), '#ffffff', 'center');
+  text('Collect C coins.', W/2, y2+18, Math.min(18, W/22), COLORS.cyan, 'center', COLORS.cyan);
+  if (Math.floor(now/500)%2===0) text('PRESS START', W/2, H*0.82, 20, COLORS.gold, 'center', COLORS.gold);
+  text('BEST ' + best, W/2, H*0.88, 14, '#8fa6ff', 'center');
+}
+
+function drawOver(now){
+  ctx.fillStyle = 'rgba(3,5,18,.6)'; ctx.fillRect(0,0,W,H);
+  const pw = Math.min(330, W-30), ph = 300, px = W/2 - pw/2, py = H*0.5 - ph/2 - 10;
+  ctx.fillStyle = 'rgba(10,14,46,.95)'; roundRect(px, py, pw, ph, 10); ctx.fill();
+  ctx.shadowColor = COLORS.purple; ctx.shadowBlur = 18; ctx.strokeStyle = COLORS.purple; ctx.lineWidth = 3; ctx.stroke(); ctx.shadowBlur = 0;
+  text(timeLeft <= 0 ? "TIME'S UP!" : 'GAME OVER', W/2, py+42, Math.min(34, pw/9), COLORS.pink, 'center', COLORS.pink);
+  text('SCORE', W/2, py+92, 15, '#8fa6ff', 'center');
+  text(String(score), W/2, py+124, 36, COLORS.cyan, 'center', COLORS.cyan);
+  text('BEST ' + best, W/2, py+168, 18, COLORS.purple, 'center', COLORS.purple);
+  if (newBest && Math.floor(now/300)%2===0) text('NEW BEST!', W/2, py+194, 15, COLORS.gold, 'center', COLORS.gold);
+  button('PLAY AGAIN', W/2, py + ph - 52, now);
+}
+
+// ---------- main loop ----------
+let last = performance.now();
+function frame(now){
+  let dt = (now - last) / 1000; last = now;
+  if (dt > 0.05) dt = 0.05;           // clamp after tab switches / hiccups
+  if (dt < 0) dt = 0;
+  // fixed sub-steps for stable physics on high-refresh screens too
+  let steps = Math.max(1, Math.ceil(dt / (1/120)));
+  const h = dt / steps;
+  for (let i=0;i<steps;i++) update(h);
+
+  ctx.setTransform(dpr*scale, 0, 0, dpr*scale, 0, 0);
+  if (shake > 0){ ctx.translate((Math.random()-0.5)*shake*20, (Math.random()-0.5)*shake*20); }
+  drawBackground(now);
+  drawPipes(now);
+  for (const c of coins) drawCoin(c);
+  drawFloor();
+  drawParticles();
+  if (state !== STATE.OVER || true) drawPilo(now);
+  ctx.setTransform(dpr*scale, 0, 0, dpr*scale, 0, 0);
+  if (state === STATE.PLAY || state === STATE.OVER) drawHUD();
+  if (state === STATE.START) drawStart(now);
+  if (state === STATE.OVER) drawOver(now);
+  requestAnimationFrame(frame);
+}
+resize();
+reset();
+// expose minimal hooks for automated testing
+window.__pilo = { get state(){ return ['start','play','over'][state]; }, get score(){ return score; }, get lives(){ return lives; }, get time(){ return timeLeft; }, get y(){ return pilo.y; }, get vy(){ return pilo.vy; },
+  get coins(){ return coins.map(c => ({x:c.x, y:c.y})); }, get W(){ return W; }, get H(){ return H; },
+  get nextGap(){ const n = pipes.find(p => p.x + PIPE_W > pilo.x - pilo.r); return n ? n.gapY : H/2; } };
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
