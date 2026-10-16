@@ -25,7 +25,7 @@ Each round lasts 90 seconds, and the gaps slowly get tighter as the clock runs d
 
 ## Run it yourself
 
-The whole game is a single file called index.html. Download it (or this whole project), double-click it, and it opens in your browser. There's nothing to install and nothing to set up.
+The whole game lives in one small file. Download this project, double-click the game file, and it opens in your browser. There's nothing to install and nothing to set up.
 
 ## Free and open source
 
